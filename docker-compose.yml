@@ -1,0 +1,21 @@
+services:
+  ros-course-ros2-concepts-l1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true
+    container_name: cont-ros-course-ros2-concepts-l1
+    environment:
+      - DISPLAY=host.docker.internal:0.0
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      # PERMISSIONS
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - $HOME/.Xauthority:/root/.Xauthority:rw
+      # WORKSPACE (solo lectura)
+      - ./.devcontainer/.vscode:/catkin_ws/.vscode:rw
+      # WORKSPACE (lectura y escritura)
+      - ./proyecto_ros:/catkin_ws/src
+    network_mode: "host"
+    command: sleep infinity
+

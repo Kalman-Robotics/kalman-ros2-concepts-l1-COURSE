@@ -1,0 +1,27 @@
+{
+	"name": "ROS devcontainer for vscode",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "ros-course-ros2-concepts-l1",
+	//"workspaceFolder": "/ros.code-workspace",
+	"workspaceFolder": "/kalman_ws",
+	
+	"shutdownAction": "stopCompose",
+    // Personalización de VS Code
+  	"customizations": {
+    "vscode": {
+			"extensions": [
+				"ms-vscode.cpptools-extension-pack",
+				"ranch-hand-robotics.rde-pack",
+				"smilerobotics.urdf",
+				"morningfrog.urdf-visualizer",
+				"ms-vscode.cmake-tools",
+				"ms-toolsai.jupyter-renderers"
+				///"github.copilot"
+				
+			]
+		}
+	}
+
+}
