@@ -1,11 +1,15 @@
 {
     "C_Cpp.default.configurationProvider": "ms-vscode.cpptools",
-    "ros.distro": "noetic",
+    "ros.distro": "humble",
     "python.analysis.extraPaths": [
-      "/opt/ros/noetic/lib/python3/dist-packages"
+      "/opt/ros/humble/lib/python3.10/site-packages",
+      "/opt/ros/humble/local/lib/python3.10/dist-packages"
     ],
     "cmake.configureSettings": {
-      "CMAKE_PREFIX_PATH": "/opt/ros/noetic"
+      "CMAKE_PREFIX_PATH": "/opt/ros/humble"
     },
-    "cmake.sourceDirectory": "/catkin_ws/src/test_package",
+    "cmake.sourceDirectory": "/kalman_ws/src",
+    "terminal.integrated.env.linux": {
+      "ROS_DISTRO": "humble"
+    }
   }

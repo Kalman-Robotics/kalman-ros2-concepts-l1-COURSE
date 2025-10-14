@@ -1,21 +1,17 @@
 services:
-  ros-course-ros2-concepts-l1:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  ros2-dev:
+    image: kalman-ros2-concepts:latest
+    container_name: ros2-dev
     privileged: true
-    container_name: cont-ros-course-ros2-concepts-l1
     environment:
-      - DISPLAY=host.docker.internal:0.0
+      - DISPLAY=${DISPLAY:-:0}
       - QT_X11_NO_MITSHM=1
+      - LIBGL_ALWAYS_SOFTWARE=1
     volumes:
-      # PERMISSIONS
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
-      - $HOME/.Xauthority:/root/.Xauthority:rw
-      # WORKSPACE (solo lectura)
-      - ./.devcontainer/.vscode:/catkin_ws/.vscode:rw
-      # WORKSPACE (lectura y escritura)
-      - ./proyecto_ros:/catkin_ws/src
-    network_mode: "host"
-    command: sleep infinity
+      - $HOME/.Xauthority:/home/kalman/.Xauthority:rw
+      - ./student_workspace:/kalman_ws/src/student:rw
+    network_mode: host
+    stdin_open: true
+    tty: true
 

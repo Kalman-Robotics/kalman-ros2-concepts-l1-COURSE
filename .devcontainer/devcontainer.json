@@ -1,11 +1,11 @@
 {
-	"name": "ROS devcontainer for vscode",
+	"name": "Kalman ROS2 Humble DevContainer",
 	"dockerComposeFile": [
 		"../docker-compose.yml"
 	],
-	"service": "ros-course-ros2-concepts-l1",
-	//"workspaceFolder": "/ros.code-workspace",
+	"service": "ros2-dev",
 	"workspaceFolder": "/kalman_ws",
+	"remoteUser": "kalman",
 	
 	"shutdownAction": "stopCompose",
     // Personalización de VS Code
