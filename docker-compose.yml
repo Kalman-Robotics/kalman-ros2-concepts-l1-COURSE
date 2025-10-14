@@ -11,6 +11,6 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - $HOME/.Xauthority:/home/kalman/.Xauthority:rw
-      #- ./student_workspace:/kalman_ws/src/student:rw
+      - ./student_workspace:/kalman_ws/src/student:rw
     network_mode: "host"
 
