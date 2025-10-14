@@ -1,8 +1,9 @@
 services:
   ros2-dev:
-    image: kalman-ros2-concepts:latest
+    image: kalmanrobotics/cursos:ros2-conceptos-basicos-l1
     container_name: ros2-dev
     privileged: true
+    command: sleep infinity
     environment:
       - DISPLAY=${DISPLAY:-:0}
       - QT_X11_NO_MITSHM=1
@@ -10,8 +11,6 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - $HOME/.Xauthority:/home/kalman/.Xauthority:rw
-      - ./student_workspace:/kalman_ws/src/student:rw
-    network_mode: host
-    stdin_open: true
-    tty: true
+      #- ./student_workspace:/kalman_ws/src/student:rw
+    network_mode: "host"
 
