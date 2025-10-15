@@ -1,6 +1,6 @@
 services:
   ros2-dev:
-    image: kalmanrobotics/cursos:ros2-conceptos-basicos-l1
+    image: kalmanrobotics/cursos:ros2-conceptos-basicos-l2
     container_name: ros2-dev
     privileged: true
     command: sleep infinity
