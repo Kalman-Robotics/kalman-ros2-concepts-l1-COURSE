@@ -1,7 +1,7 @@
 services:
-  ros2-dev:
-    image: kalmanrobotics/cursos:ros2-conceptos-basicos-l2
-    container_name: ros2-dev
+  ros2-conceptos-basicos-l1:
+    image: kalmanrobotics/cursos:ros2-conceptos-basicos-l1
+    container_name: cont-cursos:ros2-conceptos-basicos-l1
     privileged: true
     command: sleep infinity
     environment:
@@ -11,6 +11,6 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - $HOME/.Xauthority:/home/kalman/.Xauthority:rw
-      - ./student_workspace:/kalman_ws/src/student:rw
+      - ./student_workspace:/kalman_ws/src:rw
     network_mode: "host"
 

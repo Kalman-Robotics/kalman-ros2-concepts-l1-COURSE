@@ -3,7 +3,7 @@
 	"dockerComposeFile": [
 		"../docker-compose.yml"
 	],
-	"service": "ros2-dev",
+	"service": "ros2-conceptos-basicos-l1",
 	"workspaceFolder": "/kalman_ws",
 	"remoteUser": "kalman",
 	
