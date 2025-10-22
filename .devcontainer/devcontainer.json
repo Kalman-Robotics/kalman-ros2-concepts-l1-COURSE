@@ -1,24 +1,23 @@
 {
-	"name": "Kalman ROS2 Humble DevContainer",
-	"dockerComposeFile": [
-		"../docker-compose.yml"
-	],
-	"service": "ros2-conceptos-basicos-l1",
-	"workspaceFolder": "/kalman_ws",
-	"remoteUser": "kalman",
-	
-	"shutdownAction": "stopCompose",
-    // Personalización de VS Code
-  	"customizations": {
-    "vscode": {
-			"extensions": [
-				"ms-vscode.cpptools-extension-pack",
-				"ranch-hand-robotics.rde-pack",
-				"smilerobotics.urdf",
-				"morningfrog.urdf-visualizer",
-				"ms-vscode.cmake-tools"
-			]
-		}
-	}
+  "name": "Kalman courses-ros2-concepts-l1 DevContainer",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "courses-ros2-concepts-l1",
+  "workspaceFolder": "/kalman_ws",
+  "remoteUser": "kalman",
 
+  "shutdownAction": "stopCompose",
+  "initializeCommand": "bash .devcontainer/init.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools-extension-pack",
+        "ranch-hand-robotics.rde-pack",
+        "smilerobotics.urdf",
+        "morningfrog.urdf-visualizer",
+        "ms-vscode.cmake-tools"
+      ]
+    }
+  }
 }
